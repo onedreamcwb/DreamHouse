@@ -1,52 +1,74 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: url('the-illustration-graphic-consists-of-abstract-background-with-a-blue-gradient-dynamic-shapes-composition-eps10-perfect-f.jpg') no-repeat center center fixed;
+    background: url('Leonardo_Phoenix_10_Create_a_logo_for_an_Esports_team_named_Dr_1.jpg') no-repeat center center fixed;
     background-size: cover;
-    color: #222;
+    color: #000000;
     margin: 0;
     padding: 0 10vw 3vw 10vw;
+    position: relative;
+}
+
+/* Overlay escuro semi-transparente */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55); /* ajuste a opacidade aqui */
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Garante que o conteúdo fique acima do overlay */
+body > * {
+    position: relative;
+    z-index: 1;
+}
+header {
+    background-color: #000000bb;
 }
 h1 {
-    color: #05f32c; /* Laranja destaque */
+    color: #ffffff; /* Laranja destaque */
     text-shadow: 1px 1px 4px #2224;
 }
 h2 {
-    color: #81c5fd; /* Azul destaque */
-    text-shadow: #e67e22;
+    color: #ebe709; /* Azul destaque */
+    text-shadow: #3f3f3e;
     text-shadow: 1px 1px 3px rgba(240, 7, 7, 0.2);
 }
 h3 {
-    color: #43a047; /* Verde destaque */
+    color: #17e421; /* Verde destaque */
     text-shadow: 1px 1px 2px #2222;
 }
 h4 {
     color: yellow;
     text-shadow: 1px 1px 4px #000, 0 0 1px #000;
 }
+p
 .indice {
     display: flex;
     justify-content: center;
     gap: 1.5em;
     margin-bottom: 2em;
+    color: #ffffff;
 }
 .indice a {
     text-decoration: none;
-    color: #3498db;
+    color: #eeeeee;
     font-weight: bold;
     padding: 6px 14px;
     border-radius: 20px;
-    background: #eaf6ff;
+    background: #121313;
     transition: background 0.2s;
 }
 .indice a:hover {
-    background: #3498db;
-    color: #fff;
+    background: #0da000;
+    color: #ddf505;
 }
 .fase {
     margin-bottom: 2.5em;
 }
 .card.semana {
-    background: #fff;
+    background: #ffffffc9;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(44,62,80,0.08);
     padding: 1.2em 1.5em;
@@ -55,7 +77,7 @@ h4 {
     transition: box-shadow 0.2s, border-color 0.2s;
 }
 .card.semana.alt {
-    background: #f0f6fa;
+    background: #f0f6fab4;
     border-left-color: #27ae60;
 }
 .card.semana:hover {
@@ -101,7 +123,7 @@ h4 {
 .topo h1 {
     margin: 0;
     font-size: 1.7em;
-    color: #2c3e50;
+    color: #f1f1f1;
     text-align: left;
 }
 .rodape {
