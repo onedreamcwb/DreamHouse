@@ -1,0 +1,162 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: url('the-illustration-graphic-consists-of-abstract-background-with-a-blue-gradient-dynamic-shapes-composition-eps10-perfect-f.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #222;
+    margin: 0;
+    padding: 0 10vw 3vw 10vw;
+}
+h1 {
+    color: #05f32c; /* Laranja destaque */
+    text-shadow: 1px 1px 4px #2224;
+}
+h2 {
+    color: #81c5fd; /* Azul destaque */
+    text-shadow: #e67e22;
+    text-shadow: 1px 1px 3px rgba(240, 7, 7, 0.2);
+}
+h3 {
+    color: #43a047; /* Verde destaque */
+    text-shadow: 1px 1px 2px #2222;
+}
+h4 {
+    color: yellow;
+    text-shadow: 1px 1px 4px #000, 0 0 1px #000;
+}
+.indice {
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+    margin-bottom: 2em;
+}
+.indice a {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: #eaf6ff;
+    transition: background 0.2s;
+}
+.indice a:hover {
+    background: #3498db;
+    color: #fff;
+}
+.fase {
+    margin-bottom: 2.5em;
+}
+.card.semana {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+    padding: 1.2em 1.5em;
+    margin-bottom: 1.5em;
+    border-left: 6px solid #3498db;
+    transition: box-shadow 0.2s, border-color 0.2s;
+}
+.card.semana.alt {
+    background: #f0f6fa;
+    border-left-color: #27ae60;
+}
+.card.semana:hover {
+    box-shadow: 0 4px 16px rgba(44,62,80,0.18);
+    border-left-color: #e67e22;
+}
+.card.semana h4 {
+    margin-top: 0;
+    margin-bottom: 0.7em;
+    font-size: 1.15em;
+}
+.card.semana ul {
+    margin: 0;
+    padding-left: 1.2em;
+}
+.card.semana li {
+    margin-bottom: 0.5em;
+    line-height: 1.5;
+    font-size: 1em;
+}
+.final {
+    background: #eaf6ff;
+    border-left: 4px solid #3498db;
+    padding: 1.2em 1.5em;
+    margin-top: 2em;
+    border-radius: 10px;
+}
+.final h3 {
+    margin-top: 0;
+}
+.topo {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+    margin-bottom: 2em;
+    margin-top: 2vw;
+}
+.logo {
+    height: 60px;
+    width: auto;
+    display: block;
+}
+.topo h1 {
+    margin: 0;
+    font-size: 1.7em;
+    color: #2c3e50;
+    text-align: left;
+}
+.rodape {
+    width: 100%;
+    background: rgba(44, 62, 80, 0.95);
+    color: #fff;
+    padding: 1.5em 0 1em 0;
+    margin-top: 3em;
+    font-size: 1em;
+}
+.rodape-conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8em;
+}
+.rodape nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    margin-top: 0.5em;
+}
+.rodape a {
+    color: #81c5fd;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+.rodape a:hover {
+    color: #ff9800;
+    text-decoration: underline;
+}
+@media (max-width: 700px) {
+    body {
+        padding: 0 2vw 2vw 2vw;
+    }
+    .card.semana {
+        padding: 1em;
+    }
+    .topo {
+        flex-direction: column;
+        gap: 0.5em;
+        text-align: center;
+    }
+    .topo h1 {
+        font-size: 1.1em;
+    }
+    .logo {
+        height: 40px;
+    }
+    .rodape nav {
+        flex-direction: column;
+        gap: 0.7em;
+        align-items: center;
+    }
+}
