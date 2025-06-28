@@ -6,6 +6,7 @@ body {
     margin: 0;
     padding: 0 10vw 3vw 10vw;
     position: relative;
+    padding-top: 0.7em 0;
 }
 
 /* Overlay escuro semi-transparente */
@@ -25,6 +26,15 @@ body > * {
 }
 header {
     background-color: #000000bb;
+}
+header.topo {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #000000e6; /* mantém o fundo escuro e visível */
+    backdrop-filter: blur(4px);
+    box-shadow: 0 2px 8px #0006;
+    padding: 0.7em 0;
 }
 h1 {
     color: #ffffff; /* Laranja destaque */
@@ -196,6 +206,29 @@ p
     color: #e2e2e1;
     font-weight: bold;
     background: rgba(255, 235, 59, 0.07);
+}
+#btn-topo {
+    display: none;
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    z-index: 99;
+    background: #222d;
+    color: #ffeb3b;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    font-size: 1.5em;
+    cursor: pointer;
+    box-shadow: 0 2px 8px #0008;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+#btn-topo:hover {
+    background: #ffeb3b;
+    color: #222;
+    transform: scale(1.12);
 }
 @media (max-width: 900px) {
     body {
