@@ -230,6 +230,10 @@ p
     color: #222;
     transform: scale(1.12);
 }
+a:focus, button:focus {
+    outline: 2px solid #ffeb3b;
+    outline-offset: 2px;
+}
 @media (max-width: 900px) {
     body {
         padding: 0 2vw 2vw 2vw;
