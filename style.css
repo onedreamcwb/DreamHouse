@@ -13,7 +13,7 @@ body::before {
     content: "";
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.55); /* ajuste a opacidade aqui */
+    background: rgba(0,0,0,0.68); /* Opacidade aumentada de 0.55 para 0.68 */
     z-index: 0;
     pointer-events: none;
 }
@@ -67,22 +67,30 @@ p
 .fase {
     margin-bottom: 2.5em;
 }
-.card.semana {
-    background: #ffffffc9;
+.card.semana,
+.card.semana.alt {
+    background: rgba(30, 30, 30, 0.88); /* Fundo mais escuro e sólido */
+    color: #fff; /* Texto branco para contraste */
     border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+    box-shadow: 0 2px 8px rgba(44,62,80,0.18);
     padding: 1.2em 1.5em;
     margin-bottom: 1.5em;
     border-left: 6px solid #3498db;
-    transition: box-shadow 0.2s, border-color 0.2s;
+    transition: box-shadow 0.3s, border-color 0.3s, transform 0.2s;
 }
 .card.semana.alt {
-    background: #f0f6fab4;
+    background: rgba(44, 62, 80, 0.92); /* Tom diferente para alternar */
     border-left-color: #27ae60;
 }
 .card.semana:hover {
-    box-shadow: 0 4px 16px rgba(44,62,80,0.18);
+    box-shadow: 0 6px 24px rgba(44,62,80,0.28);
     border-left-color: #e67e22;
+    transform: translateY(-4px) scale(1.02);
+}
+.card.semana.alt:hover {
+    box-shadow: 0 6px 24px rgba(44,62,80,0.28);
+    border-left-color: #e67e22;
+    transform: translateY(-4px) scale(1.02);
 }
 .card.semana h4 {
     margin-top: 0;
@@ -97,6 +105,27 @@ p
     margin-bottom: 0.5em;
     line-height: 1.5;
     font-size: 1em;
+    transition: background 0.2s, color 0.2s;
+    border-radius: 6px;
+    padding: 2px 6px;
+}
+.card.semana li:hover {
+    background: #232b3b;
+    color: #ffeb3b;
+    cursor: pointer;
+}
+.card.semana.alt li {
+    margin-bottom: 0.5em;
+    line-height: 1.5;
+    font-size: 1em;
+    transition: background 0.2s, color 0.2s;
+    border-radius: 6px;
+    padding: 2px 6px;
+}
+.card.semana.alt li:hover {
+    background: #232b3b;
+    color: #ffeb3b;
+    cursor: pointer;
 }
 .final {
     background: #eaf6ff;
@@ -158,6 +187,48 @@ p
     color: #ff9800;
     text-decoration: underline;
 }
+@media (max-width: 900px) {
+    body {
+        padding: 0 2vw 2vw 2vw;
+    }
+    .fase, .final, .card.semana, .rodape-conteudo {
+        max-width: 100%;
+    }
+    .topo {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5em;
+        text-align: center;
+    }
+    .logo {
+        height: 40px;
+        margin-bottom: 0.5em;
+    }
+    h1 {
+        font-size: 1.2em;
+    }
+    h2 {
+        font-size: 1.1em;
+    }
+    h3 {
+        font-size: 1em;
+    }
+    .indice {
+        flex-direction: column;
+        gap: 0.7em;
+        align-items: center;
+    }
+    .card.semana, .card.semana.alt {
+        padding: 1em 0.7em;
+        font-size: 0.98em;
+    }
+    .rodape nav {
+        flex-direction: column;
+        gap: 0.7em;
+        align-items: center;
+    }
+}
+
 @media (max-width: 700px) {
     body {
         padding: 0 2vw 2vw 2vw;
@@ -180,5 +251,20 @@ p
         flex-direction: column;
         gap: 0.7em;
         align-items: center;
+    }
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 1em;
+    }
+    h2 {
+        font-size: 0.95em;
+    }
+    h3 {
+        font-size: 0.9em;
+    }
+    .card.semana, .card.semana.alt {
+        font-size: 0.93em;
     }
 }
